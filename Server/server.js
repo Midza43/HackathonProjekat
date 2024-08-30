@@ -9,7 +9,7 @@ let vlaznost;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../Client')));
-
+app.use(express.json());
 // Ruta za prikaz index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../Client', 'index.html'));
@@ -27,6 +27,14 @@ app.post('/post-data', (req, res) => {
 // Ruta za slanje zahtjeva ESP32
 app.get('/get-data', (req, res) => {
     res.send('Pošalji zahtjev na ESP32!');
+});
+
+app.get('/get-temp-data', (req, res) => {
+    const data = {
+        temp: temperatura, 
+        hum: vlaznost    
+    };
+    res.json(data);
 });
 
 
