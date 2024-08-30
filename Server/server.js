@@ -4,8 +4,10 @@ const path = require('path');
 const app = express();
 const port = 8080; 
 
-const temperatura = null;
-const vlaznost = null;
+let temperatura;
+let vlaznost;
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../Client')));
 
 // Ruta za prikaz index.html
