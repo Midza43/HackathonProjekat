@@ -1,10 +1,15 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
-const port = 8080;  
+const port = 8080; 
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '../Client')));
+
+// Ruta za prikaz index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Client', 'index.html'));
+});
 
 // Ruta za primanje podataka sa ESP32
 app.post('/post-data', (req, res) => {

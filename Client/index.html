@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet">
+    <link href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <script src="/bootstrap-5.3.3-dist/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="/bootstrap-5.3.3-dist/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/flag-icons-main/css/flag-icons.min.css">
+    <script src="/smoothLoad.js"></script>
+    <title>Document</title>
+    <style>
+        @keyframes heartbeat {
+            0%,
+            100% {
+                transform: scale(1);
+                border-color: #2a91f9;
+            }
+            50% {
+                transform: scale(1.1);
+                border-color: #b3c8de;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <section class="outter option1">
+        <section class="video-container">
+            <video autoplay loop playsinline muted>
+                <source src="images/sarajevo.mp4" type="video/mp4">
+            </video>
+            <div class="overlay">
+                <div class="callout text-light ">
+                    <div class="mb-3">
+                        <h1 id="date" class="font-monospace display-4"></h1>
+                        <h1 id="time" class="font-monospace display-4"></h1>
+                    </div>
+                    <div class="mb-1 mt-4">
+                        <h1 class="text-light font-monospace display-4"><i class="bi bi-thermometer-half"></i> 27</h1>
+                        <h1 class="text-light font-monospace display-4"><i class="bi bi-moisture"></i> 27</h1>
+                    </div>
+                    <div class="button mt-5" style="animation: heartbeat 1s infinite;">
+                        <div class="inner">
+                            <span class="text-light fs-1 font-monospace" onclick="transitionToPage('menu.html')">
+                                Klikni
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dropdown mt-5">
+                        <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fi fi-ba"></i>
+                        </button>
+                        <ul class="dropdown-menu" style="background-color: transparent;">
+                            <li><a class="dropdown-item text-light" href="#"><i class="fi fi-ba me-3"></i>Bosanski
+                                    <i class="fa-solid fa-check ms-2" style="color: #ffffff;"></i></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-light" href="#"><i class="fi fi-us me-3"></i>Engleski</a>
+                            </li>
+                            <li><a class="dropdown-item text-light" href="#"><i class="fi fi-de me-3"></i>Njemacki</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="/dateTime.js"></script>
+</body>
+</html>
