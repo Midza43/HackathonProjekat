@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 const port = 8080; 
 
+const temperatura = null;
+const vlaznost = null;
 app.use(express.static(path.join(__dirname, '../Client')));
 
 // Ruta za prikaz index.html
@@ -13,8 +15,10 @@ app.get('/', (req, res) => {
 
 // Ruta za primanje podataka sa ESP32
 app.post('/post-data', (req, res) => {
-    const sensorValue = req.body.sensor;
-    console.log(`Vrijednost sa senzora: ${sensorValue}`);
+     temperatura = req.body.temp;
+     vlaznost = req.body.hum;
+    console.log(`Temperatura: ${temperatura}`);
+    console.log(`Vlaznost: ${vlaznost}`);
     res.send('Podaci primljeni!');
 });
 
