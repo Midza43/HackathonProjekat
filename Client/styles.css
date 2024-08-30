@@ -32,8 +32,12 @@
 
 .menu-icon {
     color: #ffffff;
-    font-size: 4rem;
+    font-size: 6rem; 
+    height: auto; 
+    max-width: 100%; 
+    display: block; 
 }
+
 
 .bg-plava {
     background-color: #2a91f9;
@@ -49,7 +53,6 @@
 
 
 }
-
 .video-container {
     height: 100vh;
     width: 100%;
