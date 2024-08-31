@@ -6,6 +6,7 @@ const port = 8080;
 
 let temperatura;
 let vlaznost;
+let kreditnaKarta;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../Client')));
@@ -19,8 +20,10 @@ app.get('/', (req, res) => {
 app.post('/post-data', (req, res) => {
      temperatura = req.body.temp;
      vlaznost = req.body.hum;
+     kreditnaKarta = req.body.card;
     console.log(`Temperatura: ${temperatura}`);
     console.log(`Vlaznost: ${vlaznost}`);
+    console.log(`Skener kreditne kartice: ${kreditnaKarta}`);
     res.send('Podaci primljeni!');
 });
 
