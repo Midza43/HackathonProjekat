@@ -16,7 +16,7 @@ const char* serverUrl = "http://192.168.43.153:8080/post-data";
 DHT dht22(DHT22_PIN, DHT22);
 void setup() {
   Serial.begin(115200);
-  SPI.begin(18, 19, 23, 5);          
+  SPI.begin();          
   mfrc522.PCD_Init();   
   dht22.begin();
   WiFi.begin(ssid, password);
@@ -35,12 +35,10 @@ void loop() {
     float hum = dht22.readHumidity();
     float temp = dht22.readTemperature();
     int card = 0;
-    if (rfid.PICC_ReadCardSerial()) {
-      card = 1;
-      rfid.PICC_HaltA();
-      
-      rfid.PCD_StopCrypto1();
-    }  
+    if(mfrc522.PICC_IsNewCardPresent()){
+        card = 1;
+    }
+
         if (isnan(hum) || isnan(temp)) {
             Serial.println("Greška pri očitanju!");
             return;

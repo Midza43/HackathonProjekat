@@ -124,9 +124,8 @@
             </div>
             <div class="card bg-transparent  ms-2 me-2 border-0">
                 <div class="card-body text-center">
-                    <button class="border-0 bg-transparent" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample"
-                        onclick="toggleContent('collapse2')">
+                    <button class="border-0 bg-transparent" type="button" onclick="location.href='gradski_prijevoz.html'"
+                    type="button">>
                         <i class="fa-solid fa-bus menu-icon"></i></button>
                     <p class="text-white font-monospace mt-2">GRADSKI PRIJEVOZ</p>
                 </div>
@@ -210,64 +209,163 @@
     </div>
     <div class="collapse" id="collapse3">
         <div class="container">
-            div class="container" style="width: 90%;">
-            <h1 class="text-white  font-monospace text-center">Top događaji</h1>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="container" style="width: 90%;">
 
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/bascarsija-Sarajevo.jpg " style="filter: brightness(0.8);"
-                            class="d-block w-100" alt="Event 1">
-                        <p class=" ms-4 text-white border border-3 rounded ps-3 pe-3 "
-                            style="position: absolute; z-index: 11; bottom: 20px; text-transform: capitalize;">
-                            <a class="text-white  text-decoration-none" href="events_details_3.html">Više informacija <i
-                                    class="fa-solid fa-chevron-right"></i></a>
-                        </p>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/bascarsija-Sarajevo.jpg " style="filter: brightness(0.6);"
+                                class="d-block w-100" alt="Baščaršija">
+                            <h2 class="ms-4 text-white pe-3"
+                                style="position: absolute; z-index: 11; bottom: 60px; text-transform: capitalize;">
+                                Baščaršija</h2>
+                            <p class=" ms-4 text-white border border-3 rounded ps-3 pe-3 "
+                                style="position: absolute; z-index: 11; bottom: 20px; text-transform: capitalize;">
+
+                                <a class="text-white  text-decoration-none" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop1">Više
+                                    informacija <i class="fa-solid fa-chevron-right"></i></a>
+                            </p>
+
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/Trebevicka-zicara.jpg " style="filter: brightness(0.6);"
+                                class="d-block w-100" alt="Baščaršija">
+                            <h2 class="ms-4 text-white  pe-3"
+                                style="position: absolute; z-index: 11; bottom: 60px; text-transform: capitalize;">
+                                Trebevićka žičara</h2>
+                            <p class=" ms-4 text-white border border-3 rounded ps-3 pe-3 "
+                                style="position: absolute; z-index: 11; bottom: 20px; text-transform: capitalize;">
+
+                                <a class="text-white  text-decoration-none" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop2">Više
+                                    informacija <i class="fa-solid fa-chevron-right"></i></a>
+                            </p>
+
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/Zuta-tabija-Sarajevo.jpg" style="filter: brightness(0.6);"
+                                class="d-block w-100" alt="Baščaršija">
+                            <h2 class="ms-4 text-white  pe-3"
+                                style="position: absolute; z-index: 11; bottom: 60px; text-transform: capitalize;">
+                                Žuta tabija</h2>
+                            <p class=" ms-4 text-white border border-3 rounded ps-3 pe-3 "
+                                style="position: absolute; z-index: 11; bottom: 20px; text-transform: capitalize;">
+
+                                <a class="text-white  text-decoration-none" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop3">Više
+                                    informacija <i class="fa-solid fa-chevron-right"></i></a>
+                            </p>
+
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="images/events_popular/slika1.png" class="d-block w-100" alt="Event 2"
-                            style="filter: brightness(0.8);">
-                        <p class=" ms-4 text-white border border-3 rounded ps-3 pe-3 "
-                            style="position: absolute; z-index: 11; bottom: 20px; text-transform: capitalize;">
-                            <a class="text-white  text-decoration-none" href="events_details_1.html">Više informacija <i
-                                    class="fa-solid fa-chevron-right"></i></a>
-                        </p>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/events_popular/slika2.jpg" class="d-block w-100" alt="Event 3"
-                            style="filter: brightness(0.8);">
-                        <p class=" ms-4 text-white border border-3 rounded ps-3 pe-3 "
-                            style="position: absolute; z-index: 11; bottom: 20px; text-transform: capitalize;">
-                            <a class="text-white  text-decoration-none" href="events_details_2.html">Više informacija <i
-                                    class="fa-solid fa-chevron-right"></i></a>
-                        </p>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active thumbnail" aria-current="true" aria-label="Slide 1">
+                            <img src="images/bascarsija-Sarajevo.jpg" class="d-block w-100" alt="...">
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            class="thumbnail" aria-label="Slide 2">
+                            <img src="images/Trebevicka-zicara.jpg" class="d-block w-100" alt="...">
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            class="thumbnail" aria-label="Slide 3">
+                            <img src="images/Zuta-tabija-Sarajevo.jpg" class="d-block w-100" alt="...">
+                        </button>
                     </div>
                 </div>
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active thumbnail" aria-current="true" aria-label="Slide 1">
-                        <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-2.jpg"
-                            class="d-block w-100" alt="...">
-                    </button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        class="thumbnail" aria-label="Slide 2">
-                        <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-1.jpg"
-                            class="d-block w-100" alt="...">
-                    </button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        class="thumbnail" aria-label="Slide 3">
-                        <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-3.jpg"
-                            class="d-block w-100" alt="...">
-                    </button>
-                </div>
+
+                <br>
+
             </div>
-
-            <br>
-
         </div>
     </div>
+
+    <div class="modal modal-fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title text-white fs-5" id="staticBackdropLabel">Baščaršija</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-white">Ne zaboravite da se uslikate kod Sebilja, najprepoznatljivijeg simbola
+                        Sarajeva. </p>
+                    <img src="images/bascarsija-Sarajevo.jpg" class="d-block img-fluid mx-auto">
+                    <p class="text-white mt-3">Sebilji su prvobitno bila mjesta koja su imala službenike koji su punili
+                        posude sa vodom i
+                        dijelili ih prolaznicima i putnicima koji bi tuda prolazili. Sarajevo je imalo nekoliko desetina
+                        sebilja, ali je u velikom požaru koji se desio 1697. uništen sve i jedan, a današnji, jedini
+                        preostali u gradu je izgrađen 1913. godine. U prošlom vijeku je tri puta renoviran – 1981. i
+                        drugi put pred ZOI 1984. godine, a u ratu je takođe bio oštećen te je urađena manja popravka
+                        1997. godine. <br>Godine 2006. urađena je detaljna rekonstrukcija Sebilja, gdje je saniran
+                        bakarni
+                        krov i obnovljen dovod i odvod vode. Danas je Sebilj centralno mjesto Baščaršije, mjesto odakle
+                        ona počinje i završava, i svakako nešto što ne možete niti trebate propustiti dok ste ovdje.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="modal modal-fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title text-white fs-5" id="staticBackdropLabel">Žuta tabija</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-white">Ne zaboravite da se uslikate kod Sebilja, najprepoznatljivijeg simbola
+                        Sarajeva. Žuta tabija predstavlja bez dileme jedno od mjesta sa najboljim pogledom na Sarajevo,
+                        a sagrađena je 1809. godine.</p>
+                    <img src="images/Zuta-tabija-Sarajevo.jpg" class="d-block img-fluid mx-auto">
+                    <p class="text-white mt-3">Za njenu izgradnju je korišten grubo tesani kamen, sa sedam vanjskih
+                        strana visokih 10 metara, a sama tabija je visoka 27,5 metara. Istorija kaže da se nakon provale
+                        Eugena Savojskog, 1697. godine, pokazalo da mala tvrđava, koja se u to vrijeme nalazila na
+                        mjestu današnje Bijele tabije, nije dovoljna za odbranu grada, pa je bosanski namjesnik Gazi
+                        Ahmed-paša Rustempašić Skopljak 1729. započeo sa gradnjom bedema oko Vratnika. Na krajevima
+                        odbrambenog zida izgrađeno je 5 bastiona, od kojih je jedan Žuta tabija, koja je ime dobila po
+                        žutom kamenu od kojeg je sagrađena. Nakon austro-ugarskog osvajanja Sarajeva utvrda je izgubila
+                        svoju funkciju.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title text-white fs-5" id="staticBackdropLabel">Žuta tabija</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-white">Uspinjača je svečano otvorena 3. maja 1959. godine uz pristustvo brojnih
+                        građana na tadašnjoj polaznoj stanici u Ulici Avdage Šahinagića, ispred Vijećnice.</p>
+                    <img src="images/Trebevicka-zicara.jpg" class="d-block img-fluid mx-auto">
+                    <p class="text-white mt-3">Visinska razlika bila je preko 500m, jer se polazna stanica nalazila na
+                        583m nadmorske visine, a Trebević je na 1160m/nv. Prvobitni sistem je imao 50 kabina kapaciteta
+                        4 putnika, i danas na novoj polaznoj stanici možete vidjeti jednu staru kabinu koja tu stoji kao
+                        uspomena i sjećanje na žičaru prvenca.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         function toggleContent(collapseId) {
