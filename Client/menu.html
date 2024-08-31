@@ -49,8 +49,6 @@
             opacity: 0.68;
             z-index: -1;
         }
-
-        
     </style>
     <title>Menu</title>
 </head>
@@ -67,7 +65,11 @@
 
     <nav class="navbar" style="background-color: #ffffff00; z-index: 1;">
         <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0);">
-            <a class="navbar-brand" href=""></a>
+
+            <h1 class="navbar-brand text-white">
+                <span id="date">, </span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="time" class=""></span>
+            </h1>
+
             <button class="navbar-toggler border-white" type="button" data-toggle="collapse"
                 data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -85,10 +87,9 @@
                     <li class="nav-item "><a class="linkovi" href="">Karte</a></li>
                     <li class="nav-item "><a class="linkovi" href="">Kamera</a></li>
                     <li class="nav-item "><a class="linkovi" href="">U blizini</a></li>
-                    <li class="nav-item "><a class="linkovi" href="">Znamenitosti</a></li>
+                    <li class="nav-item "><a class="linkovi" href="">Zanmenitosti</a></li>
                     <li class="nav-item "><a class="linkovi" href="">FAQ</a></li>
                 </ul>
-
             </div>
         </div>
     </nav>
@@ -96,132 +97,72 @@
     <!--main content-->
     <div class="container" style="height:auto; max-height:100%; overflow:hidden;">
 
-        <!--slider-->
-        <div class="container mt-3">
-            <div class="row justify-content-center">
-                <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner mt-4">
-                        <div class="carousel-item mt-4 active">
-                            <div class="container text-center">
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='events.html'">
-                                            <i class="fa-regular fa-calendar menu-icon"></i></button>
-                                        <p class="text-white font-monospace mt-2 fs-3">Eventi</p>
+        <div class="container mt-4 text-center">
+            <div class="row mb-4">
+                <div class="col-6">
+                    <button class="border-0" type="button" onclick="location.href='events.html'">
+                        <i class="fa-regular fa-calendar menu-icon"></i></button>
+                    <p class="text-white font-monospace mt-2 fs-3">Eventi</p>
 
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-
-                                            <i class="fa-solid fa-utensils menu-icon"></i></button>
-                                        <p class="text-white font-monospace mt-2 fs-3">Restorani</p>
-                                    </div>
-
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-
-                                            <i class="fa-solid fa-timeline menu-icon"></i>
-
-                                        </button>
-                                        <p class="text-white font-monospace mt-2 fs-3">AI Pomoć</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-                                            <i class="fa-solid fa-bus menu-icon"></i></button>
-                                        <p class="text-white font-monospace mt-2 fs-3">Gradski prijevoz</p>
-                                    </div>
-
-                                </div>
-
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-                                            <i class="fa-solid fa-bed menu-icon"></i></button>
-                                        <p class="text-white font-monospace mt-2 fs-3">Hoteli</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-
-                                            <i class="fa-solid fa-car  menu-icon"></i>
-                                        </button>
-                                        <p class="text-white font-monospace mt-2 fs-3">Saobraćaj</p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Second Slide -->
-                        <div class="carousel-item mt-4">
-                            <div class="container text-center">
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-                                            <i class="fa-solid fa-ticket menu-icon"></i></button>
-                                        <p class="text-white font-monospace mt-2 fs-3">Karte</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-                                            <i class="fa-solid fa-camera menu-icon"></i></button>
-                                        <p class="text-white font-monospace mt-2 fs-3">Kamera</p>
-                                    </div>
-
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-                                            <i class="fa-solid fa-map-location-dot menu-icon"></i></button>
-                                        <p class="text-white font-monospace mt-2 fs-3">Znamenitosti</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-                                            <i class="fa-solid fa-circle-question menu-icon"></i></button>
-                                        <p class="text-white font-monospace mt-2 fs-3">FAQ</p>
-                                    </div>
-
-                                </div>
-                                <div class="row mb-4">
-
-                                    <div class="col-12">
-                                        <button class="border-0" type="button" onclick="location.href='#'">
-
-                                            <i class="fa-solid fa-location-dot  menu-icon"></i>
-
-                                        </button>
-                                        <p class="text-white font-monospace mt-2 fs-3">U blizini</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                <div class="col-6">
+                    <button class="border-0" type="button" onclick="location.href='Guzve.html'">
+
+                        <i class="fa-solid fa-landmark menu-icon"></i></button>
+                    <p class="text-white font-monospace mt-2 fs-3">Administrativne <br>ustanove</p>
+                </div>
+
             </div>
-        </div>
-        <img src="images/logo.png" class="mt-5 d-block mx-auto img-fluid">
-    </div> <!--End of carousel-->
+            <div class="row mb-4">
+                <div class="col-6">
+                    <button class="border-0" type="button" onclick="location.href='#'">
+
+                        <i class="fa-solid fa-timeline menu-icon"></i>
+
+                    </button>
+                    <p class="text-white font-monospace mt-2 fs-3">AI Pomoć</p>
+                </div>
+                <div class="col-6">
+                    <button class="border-0" type="button" onclick="location.href='gradski_prijevoz.html'">
+                        <i class="fa-solid fa-bus menu-icon"></i></button>
+                    <p class="text-white font-monospace mt-2 fs-3">Gradski prijevoz</p>
+                </div>
+
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-6">
+                    <button class="border-0" type="button" onclick="location.href='turisticka_ploca.html'">
+                        <i class="fa-solid fa-map-location-dot menu-icon"></i></button>
+                    <p class="text-white font-monospace mt-2 fs-3">Turistička ploča</p>
+                </div>
+                <div class="col-6">
+                    <button class="border-0" type="button" onclick="location.href='ulaznice.html'">
+
+                        <i class="fa-solid fa-ticket  menu-icon"></i>
+                    </button>
+                    <p class="text-white font-monospace mt-2 fs-3">Ulaznice</p>
+                </div>
+
+            </div>
+            <img src="images/logo.png" class="mt-5 d-block mx-auto img-fluid">
+        </div> <!--End of carousel-->
 
 
+        <script src="dateTime.js"></script>
+        <script>
+            document.addEventListener('click', function (event) {
 
+                var navbar = document.getElementById('navbarCollapse');
+                var toggler = document.querySelector('.navbar-toggler');
+
+
+                if (!navbar.contains(event.target) && !toggler.contains(event.target) && navbar.classList.contains('show')) {
+
+                    toggler.click();
+                }
+            });
+        </script>
 
 
 </body>

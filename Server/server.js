@@ -40,6 +40,13 @@ app.get('/get-temp-data', (req, res) => {
     res.json(data);
 });
 
+app.get('/get-card-data', (req, res) => {
+    const data = {
+        card: kreditnaKarta    
+    };
+    res.json(data);
+});
+
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);

@@ -108,87 +108,40 @@
         </div>
     </nav>
 
+    <div class="container mt-5">
 
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card text-white border-0" style="width: 100%; background-color: #21252981;">
 
-    <div class="container" style="width: 90%;">
-        <h1 class="text-white  font-monospace text-center">Top događaji</h1>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="card-body">
+                        <h1 class="card-title">Ulaznica za događaj SARAJEVO INNOVATION SUMMIT 2024</h1>
+                        <p class="card-text" style="font-size: 2rem;">
+                            Plaćanje uspješno<br>
+                        </p>
 
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/events_popular/slika3.jpg " style="filter: brightness(0.8);" class="d-block w-100"
-                        alt="Event 1">
-                    <p class=" ms-4 text-white border border-3 rounded ps-3 pe-3 "
-                        style="position: absolute; z-index: 11; bottom: 20px; text-transform: capitalize;">
-                        <a class="text-white  text-decoration-none" href="events_details_3.html">Više informacija <i
-                                class="fa-solid fa-chevron-right"></i></a>
-                    </p>
+                        <img src="images/CheckboxAnimation_Success.gif" class="d-block mx-auto" style="width: 80%;"
+                            alt="...">
+                        <p class="card-text" style="font-size: 1.5rem;">
+                            Skenirajte Vaš QR kod ispod!
+                        </p>
+                    </div>
 
+                    <div class="card-body">
+                        
+                        <img src="images/qr_dogadjaj.png" class="d-block mx-auto" style="width: 50%;" alt="...">
+
+                        <button class="btn btn-lg btn-success" onclick="location.href='menu.html'"
+                            type="button">Završi</button>
+
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="images/events_popular/slika1.png" class="d-block w-100" alt="Event 2"
-                        style="filter: brightness(0.8);">
-                    <p class=" ms-4 text-white border border-3 rounded ps-3 pe-3 "
-                        style="position: absolute; z-index: 11; bottom: 20px; text-transform: capitalize;">
-                        <a class="text-white  text-decoration-none" href="events_details_1.html">Više informacija <i
-                                class="fa-solid fa-chevron-right"></i></a>
-                    </p>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/events_popular/slika2.jpg" class="d-block w-100" alt="Event 3"
-                        style="filter: brightness(0.8);">
-                    <p class=" ms-4 text-white border border-3 rounded ps-3 pe-3 "
-                        style="position: absolute; z-index: 11; bottom: 20px; text-transform: capitalize;">
-                        <a class="text-white  text-decoration-none" href="events_details_2.html">Više informacija <i
-                                class="fa-solid fa-chevron-right"></i></a>
-                    </p>
-                </div>
-            </div>
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                    class="active thumbnail" aria-current="true" aria-label="Slide 1">
-                    <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-2.jpg"
-                        class="d-block w-100" alt="...">
-                </button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="thumbnail"
-                    aria-label="Slide 2">
-                    <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-1.jpg"
-                        class="d-block w-100" alt="...">
-                </button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="thumbnail"
-                    aria-label="Slide 3">
-                    <img src="https://codingyaar.com/wp-content/uploads/bootstrap-carousel-slide-3.jpg"
-                        class="d-block w-100" alt="...">
-                </button>
             </div>
         </div>
 
-        <br>
-
     </div>
 
-
-
-
-    <script>
-        function toggleContent(collapseId) {
-
-            var targetCollapse = document.getElementById(collapseId);
-
-
-            var collapses = document.querySelectorAll('.collapse');
-            collapses.forEach(function (collapse) {
-
-                if (collapse.id === collapseId) {
-                    collapse.classList.toggle('show');
-                } else {
-
-                    collapse.classList.remove('show');
-                }
-            });
-        }
-    </script>
-
+   
     <script src="dateTime.js"></script>
     <script>
         document.addEventListener('click', function (event) {

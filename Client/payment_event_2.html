@@ -184,6 +184,31 @@
             }
         });
     </script>
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('/get-card-data');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                
+                 
+            const data = await response.json(); 
+            console.log('Parsed JSON data:', data);
+            if (data.card === "1") {
+                
+                window.location.href = 'payment_event_3.html'; 
+            }
+               
+    
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+    
+        setInterval(fetchData, 1000);
+        document.addEventListener('DOMContentLoaded', fetchData);
+    </script>
 </body>
 
 </html>
