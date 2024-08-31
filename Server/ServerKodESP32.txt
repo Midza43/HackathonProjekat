@@ -1,13 +1,23 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <DHT.h>
+#include <SPI.h>
+#include <MFRC522.h>
+
 #define DHT22_PIN  21
+#define SS_PIN 5   
+#define RST_PIN 22 
+
+MFRC522 mfrc522(SS_PIN, RST_PIN);
+
 const char* ssid = "MidzaMidza"; //Promjena wifija na hotspot teleofona, globalsoft ima problem sa spajanjem
 const char* password = "midza432001";
 const char* serverUrl = "http://192.168.43.153:8080/post-data";
 DHT dht22(DHT22_PIN, DHT22);
 void setup() {
   Serial.begin(115200);
+  SPI.begin(18, 19, 23, 5);          
+  mfrc522.PCD_Init();   
   dht22.begin();
   WiFi.begin(ssid, password);
 
@@ -24,19 +34,25 @@ void loop() {
     http.begin(serverUrl);
     float hum = dht22.readHumidity();
     float temp = dht22.readTemperature();
-        
+    int card = 0;
+    if (rfid.PICC_ReadCardSerial()) {
+      card = 1;
+      rfid.PICC_HaltA();
+      
+      rfid.PCD_StopCrypto1();
+    }  
         if (isnan(hum) || isnan(temp)) {
             Serial.println("Greška pri očitanju!");
             return;
         }
     http.setTimeout(5000); 
-    String postData = "temp=" + String(temp) + "hum="+ String(hum);
-
+    String postData = "temp=" + String(temp) + "&hum="+ String(hum) + "&card="+String(card);
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
     int httpResponseCode = http.POST(postData);
     if (httpResponseCode > 0) {
       String response = http.getString();
       Serial.println(response);
+      card = 0;
     } else {
       Serial.print("Error on sending POST: ");
       Serial.println(httpResponseCode);
